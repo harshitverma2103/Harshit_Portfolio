@@ -1,0 +1,11 @@
+.about-us-container {
+     padding-left: 5%;
+     padding-right: 5%;
+}
+
+.about-us-content {
+     flex: 1;
+     text-align: start;
+     font-size: 1.6rem;
+     color: #808080
+}
