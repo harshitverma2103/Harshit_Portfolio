@@ -2,9 +2,11 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import astro_dev from "../../assets/astrodev.png";
 import "./styles.css";
+import FlipButton from "../Common/Button";
 
 const Hero = () => {
   const imageRef = useRef(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     const imageElement = imageRef.current;
@@ -23,6 +25,26 @@ const Hero = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const buttonElement = buttonRef.current;
+
+    const handleMouseEnter = () => {
+      gsap.to(buttonElement, { scale: 1.1, duration: 0.3, ease: "power1.out" });
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(buttonElement, { scale: 1, duration: 0.3, ease: "power1.out" });
+    };
+
+    buttonElement.addEventListener("mouseenter", handleMouseEnter);
+    buttonElement.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      buttonElement.removeEventListener("mouseenter", handleMouseEnter);
+      buttonElement.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-text">
@@ -32,10 +54,18 @@ const Hero = () => {
           in React and automated testing, dedicated to creating high-quality,
           user-friendly applications.
         </p>
-        <button>Resume</button>
+        <FlipButton
+          ref={buttonRef}
+          fileUrl="https://drive.google.com/uc?export=download&id=1NvaIZ05L5erZIzYvvzevqkS2EliPl16C"
+          fileName="Resume.pdf"
+        />
       </div>
       <div className="hero-image">
-        <img ref={imageRef} src={astro_dev} alt="Description of the image" />
+        <img
+          ref={imageRef}
+          src={astro_dev}
+          alt="Illustration of Harshit Verma, Front-End Developer"
+        />
       </div>
     </section>
   );
