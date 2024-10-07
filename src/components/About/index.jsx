@@ -6,7 +6,6 @@ const AboutUs = () => {
   return (
     <div className="about-us-container">
       <div className="about-us-content">
-        <Title text1="About" text2="Me" id={1} />
         <p>
           👋 Hi there! I&apos;m Harshit Verma, a Frontend Developer passionate
           about crafting beautiful web experiences. 🌐 I have expertise in
