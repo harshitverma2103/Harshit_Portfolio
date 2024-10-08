@@ -1,5 +1,6 @@
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutUs from "./components/About";
@@ -20,6 +21,7 @@ function App() {
         <Title text1="My" text2="Skills" id={2} />
         <SkillsSection />
       </div>
+      <SpeedInsights/>
       <Analytics />
     </div>
   );
