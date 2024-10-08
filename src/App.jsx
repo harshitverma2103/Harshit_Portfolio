@@ -10,10 +10,10 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <Title text1="About" text2="Me" id={1}/>
+      <Title text1="About" text2="Me" id={1} />
       <AboutUs />
-      <Title text1="My" text2="Skills" id={2}/>
-      <SkillsSection/>
+      <Title text1="My" text2="Skills" id={2} />
+      <SkillsSection />
     </div>
   );
 }
