@@ -1,6 +1,5 @@
 import React from "react";
-import "./style.css"; // Ensure the CSS file is in the same directory or adjust the path accordingly.
-import Title from "../common/Title";
+import "./style.css";
 
 const SkillsSection = () => {
   const skills = [
