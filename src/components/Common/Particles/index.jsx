@@ -6,8 +6,9 @@ const generateUniqueId = () => {
 };
 
 const ParticleEffect = () => {
-  const particlesToCreate = 10;
-  const particleSize = 5;
+  const particlesToCreate = 35;
+  const particlesToCreateOnHover = 3;
+  const particleSize = 8;
   const particleColor = "#61dafb";
 
   useEffect(() => {
@@ -56,23 +57,25 @@ const ParticleEffect = () => {
       });
     };
 
-    const handleMouseMove = (event) => {
+    const createParticlesPeriodically = () => {
       for (let i = 0; i < particlesToCreate; i++) {
+        const randomX = Math.random() * window.innerWidth;
+        const randomY = Math.random() * window.innerHeight;
+        createParticle(randomX, randomY);
+      }
+    };
+
+    const handleMouseMove = (event) => {
+      for (let i = 0; i < particlesToCreateOnHover; i++) {
         createParticle(event.clientX, event.clientY);
       }
     };
 
-    const handleScroll = () => {
-      const x = window.scrollX + window.innerWidth / 2;
-      const y = window.scrollY + window.innerHeight / 2;
-      for (let i = 0; i < particlesToCreate; i++) {
-        createParticle(x, y);
-      }
-    };
-
+    const particleInterval = setInterval(createParticlesPeriodically, 1000);
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
+      clearInterval(particleInterval);
       window.removeEventListener("mousemove", handleMouseMove);
       particleContainer.remove();
     };
