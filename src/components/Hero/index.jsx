@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import astro_dev from "../../assets/astrodev.png";
-import "./styles.css";
 import FlipButton from "../Common/Button";
+import "./styles.css";
 
 const Hero = () => {
   const imageRef = useRef(null);
