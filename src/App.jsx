@@ -5,7 +5,6 @@ import AboutUs from "./components/About";
 import Title from "./components/Common/Title/index";
 import SkillsSection from "./components/Skills";
 import ParticleEffect from "./components/Common/Particles";
-import Page from "./page";
 
 function App() {
   return (
