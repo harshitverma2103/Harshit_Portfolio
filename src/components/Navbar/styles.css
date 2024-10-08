@@ -2,14 +2,13 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     padding-left: 5%;
-     padding-right: 5%;
+     padding: 1rem 5%;
      background-color: transparent;
-     margin-top: 2%;
+     position: relative;
 }
 
 .navbar-logo {
-     font-size: 1.8rem;
+     font-size: 2rem;
      color: #ffffff;
 }
 
@@ -25,32 +24,31 @@
 
 .navbar-menu {
      display: flex;
-     gap: 1.8rem;
-}
-
-.navbar-menu-icon {
-     display: none;
-     font-size: 1.8rem;
-     cursor: pointer;
+     gap: 2rem;
 }
 
 .navbar-menu ul {
      list-style: none;
      display: flex;
      gap: 1.8rem;
-     /* Remove from li */
 }
 
 .navbar-menu ul li a {
      text-decoration: none;
      color: #ffffff;
      font-size: 1.2rem;
-     transition: color 0.3s ease, background-color 0.3s ease;
+     transition: color 0.3s ease;
 }
 
 .navbar-menu ul li a:hover {
      color: #61dafb;
-     text-decoration: underline 2px #61dafb;
+     text-decoration: underline;
+}
+
+.navbar-menu-icon {
+     display: none;
+     font-size: 1.5rem;
+     cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -62,12 +60,12 @@
           left: 0;
           right: 0;
           background-color: #1e1e1e;
+          z-index: 100;
           padding: 1rem 0;
      }
 
      .navbar-menu.active {
           display: flex;
-          /* Flex is applied here */
      }
 
      .navbar-menu-icon {
@@ -76,13 +74,7 @@
 
      .navbar-menu ul {
           flex-direction: column;
-          align-items: center;
-          width: 100%;
-          /* Adjust width for better alignment */
-          gap: 0.5rem;
-     }
-
-     .navbar-menu ul li {
-          margin: 0;
+          align-items: start;
+          gap: 1rem;
      }
 }
