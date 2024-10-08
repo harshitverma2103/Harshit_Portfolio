@@ -6,6 +6,7 @@ import AboutUs from "./components/About";
 import Title from "./components/Common/Title/index";
 import SkillsSection from "./components/Skills";
 import ParticleEffect from "./components/Common/Particles";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Title text1="My" text2="Skills" id={2} />
         <SkillsSection />
       </div>
+      <SocialMedia />
       <Analytics />
     </div>
   );
