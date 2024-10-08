@@ -23,7 +23,6 @@
      grid-column-gap: 50px;
 }
 
-/* Skill bar styles remain the same */
 .skills_main .skill_bar .info {
      display: flex;
      justify-content: space-between;
@@ -145,6 +144,7 @@
 @media (max-width: 1024px) {
      .skills_section {
           padding: 0 5%;
+          height: 140%;
      }
 
      .skills_main {
