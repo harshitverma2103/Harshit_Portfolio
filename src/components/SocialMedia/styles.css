@@ -1,0 +1,18 @@
+.social-media {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.social-icon {
+     font-size: 30px;
+     color: #cccccc;
+     transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+     color: #61dafb;
+}
