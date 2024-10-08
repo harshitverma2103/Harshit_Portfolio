@@ -1,8 +1,4 @@
-.button-container {
-     display: flex;
- }
- 
- .btn-flip {
+.btn-flip {
      opacity: 1;
      outline: 0;
      color: #fff;
@@ -15,19 +11,19 @@
      font-family: 'Open Sans', sans-serif;
      text-transform: uppercase;
      perspective: 1000px;
- }
- 
- .btn-flip:hover::after {
+}
+
+.btn-flip:hover::after {
      opacity: 1;
      transform: translateY(0) rotateX(0);
- }
- 
- .btn-flip:hover::before {
+}
+
+.btn-flip:hover::before {
      opacity: 0;
      transform: translateY(50%) rotateX(90deg);
- }
- 
- .btn-flip::after {
+}
+
+.btn-flip::after {
      top: 0;
      left: 0;
      opacity: 0;
@@ -39,9 +35,9 @@
      background: #adadaf;
      content: attr(data-back);
      transform: translateY(-50%) rotateX(90deg);
- }
- 
- .btn-flip::before {
+}
+
+.btn-flip::before {
      top: 0;
      left: 0;
      opacity: 1;
@@ -54,5 +50,17 @@
      background: #323237;
      content: attr(data-front);
      transform: translateY(0) rotateX(0);
- }
- 
+}
+
+@media (max-width: 600px) {
+     .btn-flip {
+          font-size: 0.9rem;
+          padding: 0 20px;
+          line-height: 35px;
+     }
+
+     .button-container {
+          flex-direction: column;
+          align-items: center;
+     }
+}
