@@ -4,7 +4,7 @@ import Page from "./page";
 
 function App() {
   return (
-    <div style={{ position: "relative", overflow: "hidden", width: "90vw" }}>
+    <div style={{ position: "relative", overflow: "hidden"}}>
       <ParticleEffect />
       <Page />
     </div>
