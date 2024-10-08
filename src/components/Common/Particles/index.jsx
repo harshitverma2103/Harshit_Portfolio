@@ -6,9 +6,9 @@ const generateUniqueId = () => {
 };
 
 const ParticleEffect = () => {
-  const particlesToCreate = 35;
-  const particlesToCreateOnHover = 3;
-  const particleSize = 8;
+  const particlesToCreate = 25;
+  const particlesToCreateOnHover = 1;
+  const particleSize = 5;
   const particleColor = "#61dafb";
 
   useEffect(() => {
