@@ -10,7 +10,8 @@ const StringAnimation = ({ id }) => {
     const finalPath = "M 10 100 Q 500 100 990 100"; // Adjust finalPath if needed
 
     const handleMouseMove = (e) => {
-      const dynamicPath = `M 10 100 Q ${e.clientX} ${e.clientY} 990 100`;
+      const offsetY = Math.min(e.clientY, 250);
+      const dynamicPath = `M 10 100 Q ${e.clientX} ${offsetY} 990 100`; // Use offsetY correctly
       gsap.to(pathElement, {
         attr: { d: dynamicPath },
         duration: 0.1,
