@@ -2,6 +2,7 @@
      width: 100%;
      height: 100vh;
      padding: 0 15%;
+     margin-bottom: 10%;
      display: flex;
      flex-direction: column;
 }
@@ -49,102 +50,24 @@
      position: absolute;
      background-color: var(--primary-color);
      border-radius: 25px;
+     animation: expand 2s forwards;
+     width: 0;
 }
 
-.skill_bar .bar .html {
-     width: 90%;
-     animation: html 2s;
-}
-
-@keyframes html {
+@keyframes expand {
      0% {
           width: 0%;
      }
 
      100% {
-          width: 90%;
-     }
-}
-
-.skill_bar .bar .css {
-     width: 85%;
-     animation: css 2s;
-}
-
-@keyframes css {
-     0% {
-          width: 0%;
-     }
-
-     100% {
-          width: 85%;
-     }
-}
-
-.skill_bar .bar .js {
-     width: 80%;
-     animation: js 2s;
-}
-
-@keyframes js {
-     0% {
-          width: 0%;
-     }
-
-     100% {
-          width: 80%;
-     }
-}
-
-.skill_bar .bar .react {
-     width: 75%;
-     animation: react 2s;
-}
-
-@keyframes react {
-     0% {
-          width: 0%;
-     }
-
-     100% {
-          width: 75%;
-     }
-}
-
-.skill_bar .bar .node {
-     width: 70%;
-     animation: node 2s;
-}
-
-@keyframes node {
-     0% {
-          width: 0%;
-     }
-
-     100% {
-          width: 70%;
-     }
-}
-
-.skill_bar .bar .mongo {
-     width: 60%;
-     animation: mongo 2s;
-}
-
-@keyframes mongo {
-     0% {
-          width: 0%;
-     }
-
-     100% {
-          width: 60%;
+          width: var(--skill-percentage);
      }
 }
 
 @media (max-width: 1024px) {
      .skills_section {
           padding: 0 5%;
-          height: 140%;
+          height: auto;
      }
 
      .skills_main {

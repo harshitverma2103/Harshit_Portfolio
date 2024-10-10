@@ -28,8 +28,11 @@ const SkillsSection = () => {
             </div>
             <div className="bar">
               <span
-                className={skill.name.toLowerCase().replace(".", "").replace(" ", "_")}
-                style={{ width: skill.percentage }}
+                className={`skill ${skill.name
+                  .toLowerCase()
+                  .replace(".", "")
+                  .replace(" ", "_")}`}
+                style={{ "--skill-percentage": skill.percentage }}
                 aria-label={`${skill.name} proficiency: ${skill.percentage}`}
               ></span>
             </div>
