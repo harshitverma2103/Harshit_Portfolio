@@ -73,7 +73,7 @@
 }
 
 .footer-icons a:hover {
-     color: var(----primary-color);
+     color: var(--primary-color);
 }
 
 .tags {
