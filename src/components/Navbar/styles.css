@@ -9,7 +9,7 @@
 
 .navbar-logo {
      font-size: 2rem;
-     color: #ffffff;
+     color: var(--white-color);
 }
 
 .navbar-logo a {
@@ -19,7 +19,7 @@
 }
 
 .navbar-logo .code-symbol {
-     color: #61dafb;
+     color: var(--primary-color);
 }
 
 .navbar-menu {
@@ -35,13 +35,13 @@
 
 .navbar-menu ul li a {
      text-decoration: none;
-     color: #ffffff;
+     color: var(--white-color);
      font-size: 1.2rem;
      transition: color 0.3s ease;
 }
 
 .navbar-menu ul li a:hover {
-     color: #61dafb;
+     color: var(--primary-color);
      text-decoration: underline;
 }
 
@@ -59,7 +59,7 @@
           top: 100%;
           left: 0;
           right: 0;
-          background-color: #1e1e1e;
+          background-color: var(--header-background);
           z-index: 100;
           padding: 1rem 0;
      }

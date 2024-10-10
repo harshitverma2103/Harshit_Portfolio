@@ -1,7 +1,7 @@
 .btn-flip {
      opacity: 1;
      outline: 0;
-     color: #fff;
+     color: var(--white-color);
      line-height: 40px;
      position: relative;
      text-align: center;
@@ -28,11 +28,11 @@
      left: 0;
      opacity: 0;
      width: 100%;
-     color: #323237;
+     color: var(--dark-grey-color);
      display: block;
      transition: all 0.3s ease;
      position: absolute;
-     background: #adadaf;
+     background: var(--light-grey-color);
      content: attr(data-back);
      transform: translateY(-50%) rotateX(90deg);
 }
@@ -41,13 +41,13 @@
      top: 0;
      left: 0;
      opacity: 1;
-     color: #adadaf;
+     color: var(--light-grey-color);
      display: block;
      padding: 0 30px;
      line-height: 40px;
      transition: all 0.3s ease;
      position: relative;
-     background: #323237;
+     background: var(--dark-grey-color);
      content: attr(data-front);
      transform: translateY(0) rotateX(0);
 }

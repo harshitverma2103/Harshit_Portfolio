@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 5%;
-    color: #adadaf;
+    color: var(--light-grey-color);
     overflow: hidden;
 }
 

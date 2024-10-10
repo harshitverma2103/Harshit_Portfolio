@@ -9,10 +9,10 @@
 
 .social-icon {
      font-size: 30px;
-     color: #cccccc;
+     color: var(--border-color);
      transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-     color: #61dafb;
+     color: var(--primary-color);
 }

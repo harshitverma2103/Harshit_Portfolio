@@ -12,7 +12,7 @@
 }
 
 .skills_head h2 span {
-     color: #61dafb;
+     color: var(--primary-color);
 }
 
 .skills_main {
@@ -28,7 +28,7 @@
      justify-content: space-between;
      align-items: center;
      padding: 0 10px;
-     color: #fff;
+     color: var(--white-color);
 }
 
 .skill_bar .info p:nth-child(2) {
@@ -38,7 +38,7 @@
 .skill_bar .bar {
      width: 100%;
      height: 10px;
-     background-color: rgba(255, 255, 255, 0.3);
+     background-color: var(--rgba-white);
      border-radius: 25px;
      margin-top: 5px;
      position: relative;
@@ -47,7 +47,7 @@
 .skill_bar .bar span {
      height: 100%;
      position: absolute;
-     background-color: #61dafb;
+     background-color: var(--primary-color);
      border-radius: 25px;
 }
 

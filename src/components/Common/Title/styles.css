@@ -7,11 +7,11 @@
 
 .text {
      font-size: 2.5rem;
-     color: #fff;
+     color: var(--white-color);
 }
 
 .highlighted-text {
-     color: #61dafb;
+     color: var(--primary-color);
 }
 
 .divider {
