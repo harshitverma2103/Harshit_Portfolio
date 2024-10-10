@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
+  --transparent-black: rgba(0, 0, 0, 0.1);
+  --semi-transparent-black: rgba(0, 0, 0, 0.7);
+  --very-light-gray: #f1f1f1;
+  --dark-gray: #333;
   --primary-color: #61dafb;
   --secondary-color: #0e0525;
   --background-color: #111;
