@@ -1,22 +1,30 @@
-import React, { useRef } from 'react';
-import { gsap } from 'gsap';
-import { FaEye, FaGithub, FaTag } from 'react-icons/fa';
-import './styles.css';
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { FaEye, FaGithub, FaTag } from "react-icons/fa";
+import "./styles.css";
 
 const ProjectCard = ({ imageUrl, title, liveLink, sourceCode, tags = [] }) => {
   const footerRef = useRef(null);
 
   const handleMouseEnter = () => {
-    gsap.to(footerRef.current, { duration: 0.5, opacity: 1, visibility: 'visible' });
+    gsap.to(footerRef.current, {
+      duration: 0.5,
+      opacity: 1,
+      visibility: "visible",
+    });
   };
 
   const handleMouseLeave = () => {
-    gsap.to(footerRef.current, { duration: 0.5, opacity: 0, visibility: 'hidden' });
+    gsap.to(footerRef.current, {
+      duration: 0.5,
+      opacity: 0,
+      visibility: "hidden",
+    });
   };
 
   return (
     <div
-      className="hover-card"
+      className="card"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -26,10 +34,20 @@ const ProjectCard = ({ imageUrl, title, liveLink, sourceCode, tags = [] }) => {
       </div>
       <div className="card-footer" ref={footerRef}>
         <div className="footer-icons">
-          <a href={liveLink} target="_blank" rel="noopener noreferrer" aria-label="Live Website">
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Live Website"
+          >
             <FaEye />
           </a>
-          <a href={sourceCode} target="_blank" rel="noopener noreferrer" aria-label="Source Code">
+          <a
+            href={sourceCode}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Source Code"
+          >
             <FaGithub />
           </a>
         </div>
@@ -37,7 +55,7 @@ const ProjectCard = ({ imageUrl, title, liveLink, sourceCode, tags = [] }) => {
           {tags.length > 0 ? (
             tags.map((tag) => (
               <div className="tag" key={tag}>
-                <FaTag style={{ marginRight: '5px' }} />
+                <FaTag style={{ marginRight: "5px" }} />
                 {tag}
               </div>
             ))

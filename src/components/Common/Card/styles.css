@@ -1,4 +1,4 @@
-.hover-card {
+.card {
      position: relative;
      width: 300px;
      height: 400px;
@@ -10,7 +10,7 @@
      cursor: pointer;
 }
 
-.hover-card:hover {
+.card:hover {
      transform: scale(1.05);
 }
 
@@ -21,7 +21,7 @@
      transition: filter 0.5s;
 }
 
-.hover-card:hover .card-image {
+.card:hover .card-image {
      filter: brightness(0.8);
 }
 
@@ -35,7 +35,7 @@
      transition: opacity 0.5s;
 }
 
-.hover-card:hover .card-content {
+.card:hover .card-content {
      opacity: 1;
 }
 
@@ -54,7 +54,7 @@
      transition: opacity 0.5s, visibility 0.5s;
 }
 
-.hover-card:hover .card-footer {
+.card:hover .card-footer {
      opacity: 1;
      visibility: visible;
 }
