@@ -31,7 +31,7 @@ const Navbar = () => {
               className="link"
               to="about-us-container"
               smooth={true}
-              offset={-260}
+              offset={-200}
               duration={1000}
               onClick={toggleMenu}
             >
@@ -60,18 +60,6 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="link"
-              to="experience_section"
-              smooth={true}
-              offset={-160}
-              duration={1000}
-              onClick={toggleMenu}
-            >
-              Experience
             </Link>
           </li>
           <li>
