@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 import "./styles.css";
 
 const Navbar = () => {
@@ -12,9 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="#home">
-          <span className="code-symbol">&lt; Harshit /&gt;</span>
-        </a>
+        <span className="code-symbol">&lt; Harshit /&gt;</span>
       </div>
 
       <div className="navbar-menu-icon" onClick={toggleMenu}>
@@ -28,16 +27,64 @@ const Navbar = () => {
       <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <a href="#projects">Projects</a>
+            <Link
+              className="link"
+              to="about-us-container"
+              smooth={true}
+              offset={-260}
+              duration={1000}
+              onClick={toggleMenu}
+            >
+              About Me
+            </Link>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <Link
+              className="link"
+              to="skills_section"
+              smooth={true}
+              offset={-160}
+              duration={1000}
+              onClick={toggleMenu}
+            >
+              Skills
+            </Link>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <Link
+              className="link"
+              to="projects_section"
+              smooth={true}
+              offset={-160}
+              duration={1000}
+              onClick={toggleMenu}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link
+              className="link"
+              to="experience_section"
+              smooth={true}
+              offset={-160}
+              duration={1000}
+              onClick={toggleMenu}
+            >
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="link"
+              to="contact_section"
+              smooth={true}
+              offset={-160}
+              duration={1000}
+              onClick={toggleMenu}
+            >
+              Contact Me
+            </Link>
           </li>
         </ul>
       </div>
