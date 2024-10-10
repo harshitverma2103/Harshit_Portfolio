@@ -53,7 +53,7 @@ const Navbar = () => {
           <li>
             <Link
               className="link"
-              to="projects_section"
+              to="project-container"
               smooth={true}
               offset={-160}
               duration={1000}
