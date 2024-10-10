@@ -12,7 +12,7 @@ const Projects = () => {
       title: "Box Office",
       liveLink: "https://harshitverma2103.github.io/box-office-app/",
       sourceCode: "https://github.com/harshitverma2103/box-office-app",
-      tags: ["CSS", "React", "JavaScript", "API"],
+      tags: ["HTML", "CSS", "JavaScript", "React", "API"],
     },
     {
       imageUrl: myImage2,
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Tic Tac Toe",
       liveLink: "https://tictactoegamebyharshit.surge.sh/",
       sourceCode: "https://github.com/harshitverma2103/tictactoe-game",
-      tags: ["CSS", "HTML", "JavaScript"],
+      tags: ["HTML", "CSS", "JavaScript", "React"],
     },
   ];
 
