@@ -4,3 +4,16 @@
      justify-content: center;
      flex-wrap: wrap;
 }
+
+@media (max-width: 1000px) {
+     .project-container {
+          flex-direction: column;
+          gap: 15px;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .project-item {
+          flex: 1 1 100%;
+     }
+}

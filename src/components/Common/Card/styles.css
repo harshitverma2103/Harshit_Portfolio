@@ -4,7 +4,7 @@
      height: 400px;
      overflow: hidden;
      border-radius: 10px;
-     margin-bottom: 10%;
+     margin-bottom: 5%;
      box-shadow: 0 4px 20px var(--transparent-black);
      transition: transform 0.2s;
      cursor: pointer;
