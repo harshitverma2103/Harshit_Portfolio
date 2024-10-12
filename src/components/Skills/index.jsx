@@ -1,24 +1,52 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import "./style.css";
+import skills from "./skillsData"; // Ensure this path is correct
 
 const SkillsSection = () => {
-  const skills = [
-    { name: "HTML", percentage: "90%" },
-    { name: "CSS", percentage: "85%" },
-    { name: "JavaScript", percentage: "80%" },
-    { name: "React.js", percentage: "75%" },
-    { name: "Node.js", percentage: "65%" },
-    { name: "Tailwind CSS", percentage: "75%" },
-    { name: "Java", percentage: "70%" },
-    { name: "Selenium", percentage: "65%" },
-    { name: "Cypress", percentage: "70%" },
-    { name: "Playwright", percentage: "75%" },
-    { name: "Git", percentage: "80%" },
-    { name: "GitHub", percentage: "85%" },
-  ];
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const skillsBars = sectionRef.current.querySelectorAll(
+      ".skill_bar .bar span"
+    );
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          skillsBars.forEach((bar, index) => {
+            const percentage = bar.parentElement.parentElement.querySelector(
+              ".info p:nth-child(2)"
+            ).textContent;
+            gsap.to(bar, {
+              width: percentage,
+              duration: 2,
+              ease: "power1.out",
+              delay: 0.5 * index,
+            });
+          });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section className="skills_section">
+    <section className="skills_section" ref={sectionRef}>
+      <div className="skills_head">
+        <h2>My Skills</h2>
+      </div>
       <div className="skills_main">
         {skills.map((skill) => (
           <div className="skill_bar" key={skill.name}>
@@ -32,7 +60,6 @@ const SkillsSection = () => {
                   .toLowerCase()
                   .replace(".", "")
                   .replace(" ", "_")}`}
-                style={{ "--skill-percentage": skill.percentage }}
                 aria-label={`${skill.name} proficiency: ${skill.percentage}`}
               ></span>
             </div>

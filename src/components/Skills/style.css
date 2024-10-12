@@ -4,6 +4,7 @@
      padding: 0 15%;
      display: flex;
      flex-direction: column;
+     justify-content: center;
 }
 
 .skills_head h2 {
@@ -49,7 +50,6 @@
      position: absolute;
      background-color: var(--primary-color);
      border-radius: 25px;
-     animation: expand 2s forwards;
      width: 0;
 }
 
