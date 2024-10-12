@@ -6,9 +6,14 @@ import "./styles.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  const links = [
+    { to: "about-us-container", label: "About Me", offset: -220 },
+    { to: "skills_section", label: "Skills", offset: -160 },
+    { to: "project-container", label: "Projects", offset: -160 },
+    { to: "contact_section", label: "Contact Me", offset: -160 },
+  ];
 
   return (
     <nav className="navbar">
@@ -17,63 +22,25 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-menu-icon" onClick={toggleMenu}>
-        {isOpen ? (
-          <FaTimes style={{ color: "#ffffff", fontSize: "1.8rem" }} />
-        ) : (
-          <FaBars style={{ color: "#ffffff", fontSize: "1.8rem" }} />
-        )}
+        {isOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
         <ul>
-          <li>
-            <Link
-              className="link"
-              to="about-us-container"
-              smooth={true}
-              offset={-200}
-              duration={1000}
-              onClick={toggleMenu}
-            >
-              About Me
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="link"
-              to="skills_section"
-              smooth={true}
-              offset={-160}
-              duration={1000}
-              onClick={toggleMenu}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="link"
-              to="project-container"
-              smooth={true}
-              offset={-160}
-              duration={1000}
-              onClick={toggleMenu}
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="link"
-              to="contact_section"
-              smooth={true}
-              offset={-160}
-              duration={1000}
-              onClick={toggleMenu}
-            >
-              Contact Me
-            </Link>
-          </li>
+          {links.map(({ to, label, offset }) => (
+            <li key={to}>
+              <Link
+                className="link"
+                to={to}
+                smooth={true}
+                offset={offset}
+                duration={1000}
+                onClick={toggleMenu}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
