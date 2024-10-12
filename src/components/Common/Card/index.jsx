@@ -7,19 +7,11 @@ const ProjectCard = ({ imageUrl, title, liveLink, sourceCode, tags = [] }) => {
   const footerRef = useRef(null);
 
   const handleMouseEnter = () => {
-    gsap.to(footerRef.current, {
-      duration: 0.5,
-      opacity: 1,
-      visibility: "visible",
-    });
+    gsap.to(footerRef.current, { opacity: 1, duration: 0.3 });
   };
 
   const handleMouseLeave = () => {
-    gsap.to(footerRef.current, {
-      duration: 0.5,
-      opacity: 0,
-      visibility: "hidden",
-    });
+    gsap.to(footerRef.current, { opacity: 0, duration: 0.3 });
   };
 
   return (
@@ -29,10 +21,8 @@ const ProjectCard = ({ imageUrl, title, liveLink, sourceCode, tags = [] }) => {
       onMouseLeave={handleMouseLeave}
     >
       <img src={imageUrl} alt={title} className="card-image" />
-      <div className="card-content">
-        <h3>{title}</h3>
-      </div>
-      <div className="card-footer" ref={footerRef}>
+      <h3 className="card-title">{title}</h3>
+      <div className="card-footer" ref={footerRef} style={{ opacity: 0 }}>
         <div className="footer-icons">
           <a
             href={liveLink}
@@ -51,18 +41,16 @@ const ProjectCard = ({ imageUrl, title, liveLink, sourceCode, tags = [] }) => {
             <FaGithub />
           </a>
         </div>
-        <div className="tags">
-          {tags.length > 0 ? (
-            tags.map((tag) => (
-              <div className="tag" key={tag}>
+        {tags.length > 0 && (
+          <div className="tags">
+            {tags.map((tag) => (
+              <span key={tag} className="tag">
                 <FaTag style={{ marginRight: "5px" }} />
                 {tag}
-              </div>
-            ))
-          ) : (
-            <span>No tags available</span>
-          )}
-        </div>
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
