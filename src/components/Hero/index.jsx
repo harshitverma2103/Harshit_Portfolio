@@ -65,6 +65,9 @@ const Hero = () => {
           ref={imageRef}
           src={astro_dev}
           alt="Illustration of Harshit Verma, Front-End Developer"
+          height="500"
+          width="500"
+          loading="lazy"
         />
       </div>
     </section>
