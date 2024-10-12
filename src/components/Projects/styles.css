@@ -5,15 +5,28 @@
      flex-wrap: wrap;
 }
 
+.project-item {
+     flex: 1 1 300px;
+     max-width: 100%;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+     transition: transform 0.2s;
+}
+
+.project-item:hover {
+     transform: translateY(-5px);
+}
+
 @media (max-width: 1000px) {
      .project-container {
           flex-direction: column;
           gap: 15px;
-          justify-content: center;
           align-items: center;
+          padding: 20px;
      }
 
      .project-item {
           flex: 1 1 100%;
+          max-width: 0%;
      }
 }
