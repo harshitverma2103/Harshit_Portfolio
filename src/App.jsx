@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import Footer from "./components/Footer";
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Hero = React.lazy(() => import("./components/Hero"));
 const AboutUs = React.lazy(() => import("./components/About"));
@@ -25,6 +26,7 @@ function App() {
           <SkillsSection />
           <Title text1="Latest" text2="Work" id={3} />
           <Projects />
+          <Footer />
           <SocialMedia />
         </Suspense>
       </div>
