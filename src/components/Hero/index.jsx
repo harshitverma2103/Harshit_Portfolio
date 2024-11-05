@@ -56,8 +56,8 @@ const Hero = () => {
         </p>
         <FlipButton
           ref={buttonRef}
-          fileUrl="https://drive.google.com/file/d/157hF7DZEFjertsbPzm4EsXj9zVd89OaC/view?usp=sharing"
-          fileName="Resume.pdf"
+          fileUrl="https://drive.google.com/file/d/1xuoKuSauhPwQadV5-ONDGU78jDazyp1w/view?usp=sharing"
+          fileName="Harshit_Resume.pdf"
         />
       </div>
       <div className="hero-image">
