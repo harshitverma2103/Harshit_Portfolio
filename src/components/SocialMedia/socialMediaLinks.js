@@ -8,7 +8,7 @@ const socialMediaLinks = [
     icon: "faLinkedin",
   },
   {
-    href: "https://www.instagram.com/harshitv.here/",
+    href: "https://www.instagram.com/harshitv._here/",
     icon: "faInstagram",
   },
   {

@@ -3,10 +3,15 @@ import { gsap } from "gsap";
 import astro_dev from "../../assets/astrodev.png";
 import FlipButton from "../Common/Button";
 import "./styles.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "framer-motion";
 
 const Hero = () => {
   const imageRef = useRef(null);
   const buttonRef = useRef(null);
+  const sectionRef = useRef(null);
+  const inView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const controls = useAnimation();
 
   useEffect(() => {
     const imageElement = imageRef.current;
@@ -45,8 +50,19 @@ const Hero = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } });
+    }
+  }, [inView, controls]);
+
   return (
-    <section className="hero">
+    <motion.section
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 40 }}
+      animate={controls}
+      className="hero"
+    >
       <div className="hero-text">
         <h1>I&apos;m Harshit Verma</h1>
         <p>
@@ -70,7 +86,7 @@ const Hero = () => {
           loading="lazy"
         />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

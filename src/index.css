@@ -1,23 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  --transparent-black: rgba(0, 0, 0, 0.1);
-  --semi-transparent-black: rgba(0, 0, 0, 0.7);
-  --very-light-gray: #f1f1f1;
-  --dark-gray: #333;
-  --primary-color: #61dafb;
-  --secondary-color: #0e0525;
-  --background-color: #111;
-  --grey-color: #808080;
-  --light-grey-color: #adadaf;
+  /* Brand Colors */
+  --primary-color: #61dafb; /* Accent Blue */
+  --primary-color-dark: #21a1c4;
+  --secondary-color: #4fd47b; /* Accent Green */
+  --accent-yellow: #faff00;
+
+  /* Backgrounds */
+  --background-color: #11131a; /* Main dark background */
+  --header-background: #181a23; /* Section/headers */
+  --surface-color: #23243a; /* Card/Surface */
+  --card-color: #23243a;
+  --input-bg: #181a23;
+
+  /* Text */
   --white-color: #ffffff;
-  --rgba-white: rgba(255, 255, 255, 0.3);
-  --border-color: #cccccc;
+  --light-grey-color: #adadaf;
+  --grey-color: #808080;
   --dark-grey-color: #323237;
-  --header-background: #1e1e1e;
-  --scrollbar-color: #61dafb #0e0525;
+  --text-color: #eaeaea;
+  --text-secondary: #b0b8c9;
+
+  /* Borders & Effects */
+  --border-color: #2c2e3a;
+  --border-radius: 8px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.18);
+
+  /* Misc */
+  --very-light-gray: #f1f1f1;
+  --rgba-white: rgba(255, 255, 255, 0.08);
+  --semi-transparent-black: rgba(0, 0, 0, 0.7);
+  --transparent-black: rgba(0, 0, 0, 0.1);
+  --scrollbar-color: var(--primary-color) var(--header-background);
   --font-family: 'Open Sans', sans-serif;
-  --border-radius: 4px;
 }
 
 * {
@@ -30,5 +46,43 @@ body {
   padding: 0;
   background-color: var(--background-color);
   font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: var(--white-color);
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+button {
+  font-family: var(--font-family);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
