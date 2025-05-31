@@ -1,20 +1,32 @@
 .social-media {
+     display: flex;
+     flex-direction: row;
+     gap: 16px;
+     align-items: center;
+     position: static;
+     margin: 0;
+   }
+   
+   .social-icon {
+     font-size: 26px;
+     color: var(--white-color);
+     opacity: 1;
+     transition: color 0.3s ease, transform 0.3s ease;
+   }
+   
+   .social-icon:hover {
+     color: var(--primary-color);
+     transform: scale(1.18) rotate(-8deg);
+     filter: drop-shadow(0 0 8px var(--primary-color)66);
+   }
+   
+   /* For floating/fixed social bar elsewhere, use a separate class */
+   .social-media-fixed {
      position: fixed;
      bottom: 20px;
      right: 20px;
-     display: flex;
      flex-direction: column;
      gap: 10px;
      z-index: 1000;
-}
-
-.social-icon {
-     font-size: 30px;
-     color: var(--border-color);
-     transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icon:hover {
-     color: var(--primary-color);
-     transform: scale(1.1);
-}
+   }
+   

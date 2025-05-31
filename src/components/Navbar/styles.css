@@ -4,8 +4,10 @@
      align-items: center;
      padding: 1rem 5%;
      margin-top: 10px;
-     background-color: transparent;
+     background-color: var(--header-background);
      position: relative;
+     border-radius: var(--border-radius);
+     box-shadow: var(--shadow);
 }
 
 .navbar-logo {
@@ -40,16 +42,35 @@
      font-size: 1.2rem;
      transition: color 0.3s ease;
      cursor: pointer;
+     border-radius: var(--border-radius);
+     padding: 0.2em 0.7em;
+     position: relative;
+     overflow: hidden;
 }
 
-.navbar-menu ul li .link:hover {
-     color: var(--primary-color);
+.navbar-menu ul li .link::after {
+     content: "";
+     position: absolute;
+     left: 50%;
+     bottom: 0.15em;
+     width: 0;
+     height: 2px;
+     background: var(--primary-color);
+     transition: width 0.3s cubic-bezier(0.4,0,0.2,1), left 0.3s cubic-bezier(0.4,0,0.2,1);
+     border-radius: 2px;
+}
+
+.navbar-menu ul li .link:hover::after,
+.navbar-menu ul li .link:focus::after {
+     width: 90%;
+     left: 5%;
 }
 
 .navbar-menu-icon {
      display: none;
      font-size: 1.5rem;
      cursor: pointer;
+     color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -64,6 +85,8 @@
           z-index: 100;
           padding: 1rem 0;
           align-items: center;
+          border-radius: 0 0 var(--border-radius) var(--border-radius);
+          box-shadow: var(--shadow);
      }
 
      .navbar-menu.active {
