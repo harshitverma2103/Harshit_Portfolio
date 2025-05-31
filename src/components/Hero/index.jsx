@@ -66,9 +66,7 @@ const Hero = () => {
       <div className="hero-text">
         <h1>I&apos;m Harshit Verma</h1>
         <p>
-          Passionate Front-End Developer and Software QA Engineer with expertise
-          in React and automated testing, dedicated to creating high-quality,
-          user-friendly applications.
+        Dedicated Manual and Automation Test Engineer with expertise in automated testing tools and methodologies. Skilled in ensuring high-quality, user-friendly applications through thorough test planning, execution, and defect tracking. 
         </p>
         <FlipButton
           ref={buttonRef}
