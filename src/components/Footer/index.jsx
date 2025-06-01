@@ -36,7 +36,7 @@ const Footer = () => {
               <a href="mailto:harshitverma2103@gmail.com" className="footer-contact-link">harshitverma2103@gmail.com</a>
             </li>
             <li>
-              <a href="tel:+919876543210" className="footer-contact-link">+91 98765 43210</a>
+              <a href="tel:+919876543210" className="footer-contact-link">+91 8445260212</a>
             </li>
             <li>
               <span className="footer-contact-link">India</span>
